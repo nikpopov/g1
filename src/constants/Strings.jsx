@@ -2,42 +2,50 @@ const Strings = {
 	english: {
 		en: "English",
 		de: "Englisch",
-		es: "Inglés"
+		es: "Inglés",
+		ua: "Українська",
 	},
 	german: {
 		en: "German",
 		de: "Deutch",
-		es: "Spanisch"
+		es: "Spanisch",
+		ua: "Німецька",
 	},
 	spanish: {
 		en: "Spanish",
 		de: "Alemán",
-		es: "Español"
+		es: "Español",
+		ua: "Іспанська",
 	},
 	locale: {
 		en: "Locale",
 		de: "Gebietsschema",
-		es: "Lugar"
+		es: "Lugar",
+		ua: "Локаль",
 	},
 	home: {
 		en: "Home",
 		de: "Haus",
-		es: "Casa"
+		es: "Casa",
+		ua: "Домашня",
 	},
 	about: {
 		en: "About",
 		de: "Über",
-		es: "Acerca de"
+		es: "Acerca de",
+		ua: "Про нас",
 	},
 	setting: {
 		en: "Setting",
 		de: "Rahmen",
-		es: "Ajuste"
+		es: "Ajuste",
+		ua: "Налаштування",
 	},
 	help: {
 		en: "Help",
 		de: "Hilfe",
-		es: "Ayuda"
+		es: "Ayuda",
+		ua: "Допомога",
 	}
 }
 

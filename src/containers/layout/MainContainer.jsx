@@ -1,7 +1,11 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { createAction } from 'redux-actions';
-//import { Row, Col, Nav, NavDropdown } from 'react-bootstrap';
+import HomeContainer from './HomeContainer';
+import AboutContainer from './AboutContainer';
+import SettingContainer from './SettingContainer';
+import HelpContainer from './HelpContainer';
+import Strings from '../../constants/Strings';
 
 class MainContainer extends React.Component {
 
@@ -12,13 +16,32 @@ class MainContainer extends React.Component {
 
 	render() {
 		return (
-			<div className="col-md-10 offset-1"></div>
+			{
+				switch (this.props.menuIndex) {
+					case 0:
+						<HomeContainer />
+					case 1:
+						<AboutContainer />
+					case 2:
+						<SettingContainer />
+					case 3:
+						<HelpContainer />
+					default:
+						<
+				}
+			}
 		);
 	}
 }
 
 MainContainer.propTypes = {
-	
+	menuIndex: PropTypes.number,
+
 };
 
-export default MainContainer;
+export default connect(
+	(state) => ({
+		index: state.upperMenu.index,
+		locale: state.upperMenu.locale,
+	})
+)(MainContainer);
