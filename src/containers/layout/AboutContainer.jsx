@@ -1,5 +1,6 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { createAction } from 'redux-actions';
 import Strings from '../../constants/Strings';
 
@@ -12,19 +13,17 @@ class AboutContainer extends React.Component {
 
 	render() {
 		return (
-			<div></div>
+			<div>
+				About Container
+			</div>
 		);
 	}
 }
 
 AboutContainer.propTypes = {
-	menuIndex: PropTypes.number,
-
+	
 };
 
 export default connect(
-	(state) => ({
-		index: state.upperMenu.index,
-		locale: state.upperMenu.locale,
-	})
+	
 )(AboutContainer);

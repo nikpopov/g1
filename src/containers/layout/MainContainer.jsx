@@ -1,5 +1,6 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { createAction } from 'redux-actions';
 import HomeContainer from './HomeContainer';
 import AboutContainer from './AboutContainer';
@@ -15,33 +16,30 @@ class MainContainer extends React.Component {
 	}
 
 	render() {
-		return (
-			{
-				switch (this.props.menuIndex) {
-					case 0:
-						<HomeContainer />
-					case 1:
-						<AboutContainer />
-					case 2:
-						<SettingContainer />
-					case 3:
-						<HelpContainer />
-					default:
-						<
-				}
-			}
-		);
+		const menuItem = this.props.menuIndex;		
+		switch (menuItem) {
+			case 0:
+				return <HomeContainer />;
+			case 1:
+				return <AboutContainer />;
+			case 2:
+				return <SettingContainer />;
+			case 3:
+				return <HelpContainer />;
+			default:
+				return null;
+		}
 	}
 }
 
 MainContainer.propTypes = {
 	menuIndex: PropTypes.number,
-
+	locale: PropTypes.string,
 };
 
 export default connect(
 	(state) => ({
-		index: state.upperMenu.index,
+		menuIndex: state.upperMenu.index,
 		locale: state.upperMenu.locale,
 	})
 )(MainContainer);
