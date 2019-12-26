@@ -3,7 +3,7 @@ const Strings = {
 		en: "English",
 		de: "Englisch",
 		es: "Inglés",
-		ua: "Українська",
+		ua: "Англійська",
 	},
 	german: {
 		en: "German",
@@ -16,6 +16,12 @@ const Strings = {
 		de: "Alemán",
 		es: "Español",
 		ua: "Іспанська",
+	},
+	ukrainian: {
+		en: "Ukrainian",
+		de: "Ukrainisch",
+		es: "Ucranio",
+		ua: "Українська",
 	},
 	locale: {
 		en: "Locale",

@@ -49,6 +49,13 @@ class LocaleMenu extends React.Component {
 						>
 							{Strings.spanish[locale]}
 						</a>
+						<a
+							className="dropdown-item"
+							href="#"
+							onClick={() => this.props.onSelectLocale("ua")}
+						>
+							{Strings.ukrainian[locale]}
+						</a>
 					</div>
 				</div>
 			</Fragment>
