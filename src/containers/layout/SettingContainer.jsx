@@ -21,9 +21,11 @@ class SettingContainer extends React.Component {
 }
 
 SettingContainer.propTypes = {
-	
+	locale: PropTypes.string,
 };
 
 export default connect(
-	
+	(state) => ({
+		locale: state.upperMenu.locale,
+	})
 )(SettingContainer);

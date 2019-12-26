@@ -21,9 +21,11 @@ class HelpContainer extends React.Component {
 }
 
 HelpContainer.propTypes = {
-	
+	locale: PropTypes.string,
 };
 
 export default connect(
-	
+	(state) => ({
+		locale: state.upperMenu.locale,
+	})
 )(HelpContainer);

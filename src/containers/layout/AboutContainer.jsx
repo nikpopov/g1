@@ -21,9 +21,11 @@ class AboutContainer extends React.Component {
 }
 
 AboutContainer.propTypes = {
-	
+	locale: PropTypes.string,
 };
 
 export default connect(
-	
+	(state) => ({
+		locale: state.upperMenu.locale,
+	})
 )(AboutContainer);

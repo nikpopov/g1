@@ -21,10 +21,11 @@ class HomeContainer extends React.Component {
 }
 
 HomeContainer.propTypes = {
-	
-
+	locale: PropTypes.string,
 };
 
 export default connect(
-	
+	(state) => ({
+		locale: state.upperMenu.locale,
+	})
 )(HomeContainer);
