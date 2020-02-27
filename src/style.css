@@ -5,3 +5,11 @@ body {
 .hello {
 	color: red;
 }
+.card_wrapper {
+	margin: 20px 0;
+}
+.card {
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+}	

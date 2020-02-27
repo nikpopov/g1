@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createAction } from 'redux-actions';
 import Strings from '../../constants/Strings';
+import WordCard from '../../components/WordCard';
+import data from '../../constants/data';
 
 class HomeContainer extends React.Component {
 
@@ -13,9 +15,9 @@ class HomeContainer extends React.Component {
 
 	render() {
 		return (
-			<div>
-				Home Container
-			</div>
+			<WordCard 
+				card={data[0]}
+			/>
 		);
 	}
 }
